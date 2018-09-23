@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import BlogList from './components/BlogList'
 import Axios from 'axios'
@@ -61,12 +60,7 @@ class App extends Component {
       <BlogList blogs = {article} key={index}/>
     )
     return (
-      <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome Bro</h1>
-        </header> */}
-        <h1>{this.state.searchKey}</h1>
+      <div className="container">
         <div className="App">
             <SearchBox onSearch={this.doSearch}/>
             {this.state.loading? ComponentLoading: Articles}
